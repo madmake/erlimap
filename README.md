@@ -32,7 +32,9 @@ LICENSE: BSD
 
 ## Example
 
+```erlang
 I=imap:open_account(ssl, "imap.yandex.com", 993, "myemail@yandex.ru", "passwrd").
 imap:select(element(2,I), "INBOX").
 imap:close_account(element(2,I)).
 f(I).
+```
