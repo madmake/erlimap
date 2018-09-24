@@ -29,3 +29,10 @@ Further, it is not intelligent about clearing out the fsm's list of untagged res
 Lastly, it is a regex shitshow that needs to be converted to a grammar/parser rig, something like [neotoma](http://github.com/seancribbs/neotoma), like what was done in [diemap](http://github.com/vagabond/diemap).
 
 LICENSE: BSD
+
+## Example
+
+I=imap:open_account(ssl, "imap.yandex.com", 993, "myemail@yandex.ru", "passwrd").
+imap:select(element(2,I), "INBOX").
+imap:close_account(element(2,I)).
+f(I).
